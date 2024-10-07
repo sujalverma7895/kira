@@ -9,14 +9,25 @@
 <style>
   /* General Reset */
  /* General Reset */
- * {
+ @font-face {
+    font-family: 'Monotype Corsiva';
+    src: url('./fonts/monotype-corsiva.ttf') format('truetype'); /* Add the correct path to your font file */
+  }
+
+  @font-face {
+    font-family: 'Century751 SeBd BT';
+    src: url('./fonts/century751-sebd-bt.ttf') format('truetype'); /* Add the correct path to your font file */
+  }
+
+  /* General Reset */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Tangerine', serif; /* Default font */
     background-color: #ffffff;
     max-width: 1300px;
     margin: 0 auto;
@@ -35,6 +46,7 @@
     right: 0;
     width: 100%;
     z-index: 1000;
+    font-family: 'Monotype Corsiva', serif; /* Font for the header */
   }
 
   .container {
@@ -73,6 +85,7 @@
     font-size: 1.1rem;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 2px;
+    font-family: 'Century751 SeBd BT', sans-serif; /* Font for navigation links */
   }
 
   .nav-links a:hover {
@@ -110,12 +123,8 @@
     cursor: pointer;
     font-size: 1.8rem;
     color: #ba2867;
+    font-family: 'Tangerine', serif; /* Font for menu toggle */
   }
-
-  .menu-toggle:hover {
-    color: #792677; /* Hover color */
-  }
-
 
   .menu-toggle:hover {
     color: #792677; /* Hover color */
@@ -154,6 +163,7 @@
     padding: 20px;
     font-size: 3rem;
     color: #792677;
+    font-family: 'Monotype Corsiva', serif; /* Font for section heading */
   }
 
   /* Image Container Section */
@@ -198,6 +208,7 @@
     margin: 50px auto; /* Centering the section */
     padding: 20px;
     text-align: center;
+    font-family: 'Monotype Corsiva', sans-serif; /* Font for about section */
   }
 
   .about h2 {
@@ -210,6 +221,8 @@
     font-size: 1.2rem;
     color: #555;
     line-height: 1.6;
+    font-family: 'Tangerine', serif; /* Font for menu toggle */
+
   }
 
   /* Contact Section Styling */
@@ -224,12 +237,14 @@
     font-size: 2.5rem;
     color: #792677;
     margin-bottom: 20px;
+    font-family: 'Monotype Corsiva', serif; /* Font for contact heading */
   }
 
   .contact form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    font-family: 'Century751 SeBd BT', sans-serif; /* Font for contact form */
   }
 
   .contact input, .contact textarea {
@@ -259,15 +274,14 @@
     background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
-    margin-top: 50px; /* Add some space above the footer */
+    margin-top: 50px; /* Add some spacing above the footer */
+    font-family: 'Century751 SeBd BT', sans-serif; /* Font for footer */
   }
 
   .footer p {
     color: #555;
     font-size: 1rem;
-    margin-bottom: 10px;
   }
-
   .footer .social-icons a {
     color: #ba2867; /* Social icon color */
     margin: 0 10px;
