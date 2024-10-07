@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Header</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 80px; /* Adjust padding-top to header height */
+  }
+
+  /* Header Styling */
+  .header {
+    background-color: #ffffff; /* Header background color */
+    color: #ba2867; /* Default text color */
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  /* Logo Styling */
+  .logo {
+    flex: 1;
+    width: 50%;
+  }
+
+  .logo img {
+    height: 50px;
+    width: auto;
+  }
+
+  /* Navigation Links Styling */
+  .nav-links {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #ba2867; /* Link text color */
+    font-size: 1.1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 2px;
+  }
+
+  .nav-links a:hover {
+    color: #792677; /* Hover text color */
+    border-bottom: 2px solid #ba2867; /* Border effect on hover */
+  }
+  .nav-icon{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  /* Icon Section Styling */
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-left: 20px;
+  }
+
+  .icons a {
+    color: #ba2867; /* Icon color */
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .icons a:hover {
+    color: #792677; /* Hover icon color */
+    transform: scale(1.1); /* Scale on hover */
+  }
+
+  /* Hamburger Menu Styling */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #ba2867;
+  }
+
+  .menu-toggle:hover {
+    color: #792677; /* Hover color */
+  }
+
+  /* Section 1 Styling */
+  .section1 {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 0;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+  }
+
+  .section1-leftdiv {
+    width: 50%;
+    text-align: center;
+  }
+
+  .section1-leftdiv img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .section1-rightdiv {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .section1-rightdiv div h1 {
+    padding: 20px;
+    font-size: 3rem;
+    color: #792677;
+  }
+
+  /* Image Container Section */
+  .main-container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 50px auto;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+  }
+
+  /* Individual divs styling */
+  .image-container {
+    width: 30%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative; /* Position for z-index effect */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Hover Effect: Enlarge the container and the image */
+  .image-container:hover {
+    transform: scale(1.1); /* Scale the container */
+    z-index: 10; /* Raise above other elements */
+  }
+
+  .image-container:hover img {
+    transform: scale(1.2); /* Scale the image inside the container */
+  }
+
+  /* Responsive Design for Tablets */
+  @media (max-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      margin: 10px 0;
+      display: none;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .icons {
+      margin-top: 10px;
+    }
+
+    .section1-leftdiv, .section1-rightdiv {
+      width: 100%;
+    }
+
+    .image-container {
+      width: 45%;
+    }
+  }
+
+  /* Responsive Design for Mobile Devices */
+  @media (max-width: 480px) {
+    .nav-links a {
+      font-size: 1rem;
+    }
+
+    .icons a {
+      font-size: 1.2rem;
+    }
+
+    .section1-rightdiv div h1 {
+      font-size: 1.8rem;
+    }
+
+    .image-container {
+      width: 100%;
+    }
+  }
+</style>
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Logo Section -->
+      <div class="logo">
+        <img src="./Images/Kira Logo.png" alt="Logo"/>
+      </div>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="nav-icon">
+        <!-- Navigation Section -->
+        <nav class="nav-links" id="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <!-- Icon Section for Search and User -->
+        <div class="icons">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1 -->
+  <section class="section1">
+    <div class="section1-leftdiv">
+      <img src="./Images/section1.jfif" alt="Section Image"/>
+    </div>
+    <div class="section1-rightdiv">
+      <div>
+        <h1>Choose minimal. Choose confidence. Choose KIRA.</h1>
+      </div>  
+    </div>
+  </section>
+
+  <!-- Image Container Section -->
+  <section>
+    <div class="main-container">
+      <!-- First Image Container -->
+      <div class="image-container">
+        <img src="./Images/img1.jfif" alt="Image 1">
+      </div>
+
+      <!-- Second Image Container -->
+      <div class="image-container">
+        <img src="./Images/img2.jfif" alt="Image 2">
+      </div>
+
+      <!-- Third Image Container -->
+      <div class="image-container">
+        <img src="./Images/img3.jfif" alt="Image 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Script for Hamburger Menu Toggle -->
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
