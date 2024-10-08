@@ -81,7 +81,7 @@
 
   .nav-links a {
     text-decoration: none;
-    color: #ba2867; /* Link text color */
+    color: #792677; 
     font-size: 1.1rem;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 2px;
@@ -89,7 +89,7 @@
   }
 
   .nav-links a:hover {
-    color: #792677; /* Hover text color */
+    color: #ba2867; 
     border-bottom: 2px solid #ba2867; /* Border effect on hover */
   }
 
@@ -107,13 +107,14 @@
   }
 
   .icons a {
-    color: #ba2867; /* Icon color */
+    color: #792677; 
     font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
   }
 
   .icons a:hover {
-    color: #792677; /* Hover icon color */
+    color: #ba2867; 
+
     transform: scale(1.1); /* Scale on hover */
   }
 
@@ -122,12 +123,14 @@
     display: none;
     cursor: pointer;
     font-size: 1.8rem;
-    color: #ba2867;
+    color: #792677; /* Hover color */
     font-family: 'Tangerine', serif; /* Font for menu toggle */
   }
 
   .menu-toggle:hover {
-    color: #792677; /* Hover color */
+    
+    color: #ba2867; /* Link text color */
+    
   }
 
   /* Section 1 Styling */
@@ -150,7 +153,7 @@
     width: 100%;
     max-width: 500px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
   }
 
   .section1-rightdiv {
@@ -161,7 +164,7 @@
 
   .section1-rightdiv div h1 {
     padding: 20px;
-    font-size: 3rem;
+    font-size: 5rem;
     color: #792677;
     font-family: 'Monotype Corsiva', serif; /* Font for section heading */
   }
@@ -263,6 +266,8 @@
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    width: 20%;
+    margin: 0 auto;
   }
 
   .contact button:hover {
@@ -270,27 +275,45 @@
   }
 
   /* Footer Section Styling */
+  /* Footer Section Styling */
   .footer {
     background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
-    margin-top: 50px; /* Add some spacing above the footer */
-    font-family: 'Century751 SeBd BT', sans-serif; /* Font for footer */
+    margin-top: 50px;
+    font-family: 'Century751 SeBd BT', sans-serif;
   }
 
   .footer p {
     color: #555;
     font-size: 1rem;
   }
+  .social-icons {
+    margin-top: 20px;
+  }
+
+  /* Updated social icon styles */
   .footer .social-icons a {
-    color: #ba2867; /* Social icon color */
     margin: 0 10px;
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
   .footer .social-icons a:hover {
-    color: #792677; /* Hover icon color */
+    transform: scale(1.2);
+  }
+
+  /* Specific icon colors */
+  .fa-facebook {
+    color: #3b5998;
+  }
+
+  .fa-instagram {
+    color: #e4405f;
+  }
+
+  .fa-whatsapp {
+    color: #25D366;
   }
 
   /* Responsive Design for Tablets */
@@ -319,8 +342,9 @@
       position: absolute;
       bottom: -165px;
       right: 50px;
+      border-radius: 12px;
     }
-
+    
     .menu-toggle {
       display: block;
       margin-top: 10px;
@@ -445,10 +469,9 @@
   <footer class="footer">
     <p>&copy; 2024 KIRA Jewelry. All rights reserved.</p>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
 
