@@ -3,140 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Styled Header</title>
+  <title>Styled Header and Card Section</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<style>
-  /* General Reset */
- /* General Reset */
- @font-face {
-    font-family: 'Monotype Corsiva';
-    src: url('./fonts/monotype-corsiva.ttf') format('truetype'); /* Add the correct path to your font file */
-  }
+  <style>
+    /* General Reset */
+    @font-face {
+      font-family: 'Monotype Corsiva';
+      src: url('./fonts/monotype-corsiva.ttf') format('truetype'); /* Add the correct path to your font file */
+    }
 
-  @font-face {
-    font-family: 'Century751 SeBd BT';
-    src: url('./fonts/century751-sebd-bt.ttf') format('truetype'); /* Add the correct path to your font file */
-  }
+    @font-face {
+      font-family: 'Century751 SeBd BT';
+      src: url('./fonts/century751-sebd-bt.ttf') format('truetype'); /* Add the correct path to your font file */
+    }
 
-  /* General Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-family: 'Tangerine', serif; /* Default font */
-    background-color: #ffffff;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-top: 80px; /* Adjust padding-top to header height */
-  }
+    body {
+      font-family: 'Tangerine', serif;
+      background-color: #ffffff;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding-top: 80px; /* Adjust padding-top to header height */
+    }
 
-  /* Header Styling */
-  .header {
-    background-color: #ffffff; /* Header background color */
-    color: #ba2867; /* Default text color */
-    padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-    font-family: 'Monotype Corsiva', serif; /* Font for the header */
-  }
+    /* Header Styling */
+    .header {
+      background-color: #ffffff;
+      color: #ba2867;
+      padding: 15px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
+      font-family: 'Monotype Corsiva', serif;
+    }
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-  }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
 
-  /* Logo Styling */
-  .logo {
-    flex: 1;
-    text-align: left;
-  }
+    .logo img {
+      height: 50px;
+      max-width: 150px;
+      width: auto;
+      transition: height 0.3s ease, max-width 0.3s ease;
+    }
 
-  .logo img {
-    height: 50px;
-    max-width: 150px;
-    width: auto;
-    transition: height 0.3s ease, max-width 0.3s ease;
-  }
+    .nav-links {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
 
-  /* Navigation Links Styling */
-  .nav-links {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
+    .nav-links a {
+      text-decoration: none;
+      color: #792677;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 2px;
+      font-family: 'Century751 SeBd BT', sans-serif;
+    }
 
-  .nav-links a {
-    text-decoration: none;
-    color: #792677; 
-    font-size: 1.1rem;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 2px;
-    font-family: 'Century751 SeBd BT', sans-serif; /* Font for navigation links */
-  }
+    .nav-links a:hover {
+      color: #ba2867;
+      border-bottom: 2px solid #ba2867;
+    }
 
-  .nav-links a:hover {
-    color: #ba2867; 
-    border-bottom: 2px solid #ba2867; /* Border effect on hover */
-  }
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: #792677;
+      font-family: 'Tangerine', serif;
+    }
 
-  .nav-icon {
-    display: flex;
-    justify-content: space-between;
-  }
+    .menu-toggle:hover {
+      color: #ba2867;
+    }
 
-  /* Icon Section Styling */
-  .icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    padding-left: 20px;
-  }
+    .icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      padding-left: 20px;
+    }
 
-  .icons a {
-    color: #792677; 
-    font-size: 1.5rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
+    .icons a {
+      color: #792677;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
 
-  .icons a:hover {
-    color: #ba2867; 
+    .icons a:hover {
+      color: #ba2867;
+      transform: scale(1.1);
+    }
 
-    transform: scale(1.1); /* Scale on hover */
-  }
+    /* Card Section Styling */
+    .card-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 50px 20px;
+      background-color: #f9f9f9;
+    }
 
-  /* Hamburger Menu Styling */
-  .menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: #792677; /* Hover color */
-    font-family: 'Tangerine', serif; /* Font for menu toggle */
-  }
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  .menu-toggle:hover {
-    
-    color: #ba2867; /* Link text color */
-    
-  }
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
 
+    .card-content {
+      padding: 20px;
+    }
 
-  /* Footer Section Styling */
-  /* Footer Section Styling */
-  .footer {
+    .card-content h3 {
+      font-size: 1.5rem;
+      color: #792677;
+      font-family: 'Monotype Corsiva', serif;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .card-content .price {
+      font-size: 1.2rem;
+      color: #ba2867;
+      margin-bottom: 10px;
+    }
+
+    .card-content .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      color: #ffffff;
+      background-color: #792677;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-content .btn:hover {
+      background-color: #ba2867;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    .footer {
     background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
@@ -176,10 +220,10 @@
     color: #25D366;
   }
 
-  
-  /* Responsive Design for Tablets */
-  @media (max-width: 768px) {
-    .container {
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
       flex-wrap: wrap;
       text-align: center;
       position: relative;
@@ -209,18 +253,18 @@
     
     .menu-toggle {
       display: block;
-      margin-top: 10px;
+     
       font-size: 1.2rem;
     }
 
     .icons {
       margin-top: 10px;
     }
-   
-  }
-
-  /* Responsive Design for Mobile Devices */
-  @media (max-width: 480px) {
+      .card-section {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 480px) {
     .nav-links a {
       font-size: 1rem;
     }
@@ -237,38 +281,151 @@
 
    
   }
-</style>
+  </style>
+</head>
 <body>
   <header class="header">
     <div class="container">
-      <!-- Logo Section -->
       <div class="logo">
         <img src="./Images/Kira Logo.png" alt="Logo"/>
       </div>
-
-      <!-- Hamburger Menu for Mobile -->
-      <div class="menu-toggle" id="mobile-menu">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <!-- Navigation Links -->
+      
       <nav class="nav-links" id="nav-links">
-        <a href="#home">Home</a>
-        <a href="#Products">Products</a>
-        <a href="#About">About Us</a> <!-- Corrected this line -->
-        <a href="#Contact">Contact</a>
+        <a href="./index.html">Home</a>
+        <a href="./page1.html">Bracelets</a>
+        <a href="./page2.html">Neckless</a>
       </nav>
-
-      <!-- Social Media Icons -->
       <div class="icons">
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
         <a href="#"><i class="fas fa-search"></i></a>
         <a href="#"><i class="fas fa-user"></i></a>
       </div>
     </div>
   </header>
-  <h1>
-    Rings
-  </h1>
+  
+
+  <!-- Card Section -->
+  <section class="card-section">
+    <div class="card">
+      <img src="./Images/img1.jfif" alt="Rings Image">
+      <div class="card-content">
+        <h3>Elegant Rings</h3>
+        <p>A beautiful Rings that complements any outfit.</p>
+        <div class="price">$49.99</div>
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./Images/img1.jfif" alt="Rings Image">
+      <div class="card-content">
+        <h3>Gold Rings</h3>
+        <p>A luxurious gold Rings with intricate design.</p>
+        <div class="price">$99.99</div>
+       
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./Images/img1.jfif" alt="Rings Image">
+      <div class="card-content">
+        <h3>Silver Rings</h3>
+        <p>A sleek and stylish silver Rings for all occasions.</p>
+        <div class="price">$69.99</div>
+        
+      </div>
+    </div>
+    <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Elegant Rings</h3>
+          <p>A beautiful Rings that complements any outfit.</p>
+          <div class="price">$49.99</div>
+          
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Gold Rings</h3>
+          <p>A luxurious gold Rings with intricate design.</p>
+          <div class="price">$99.99</div>
+         
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Silver Rings</h3>
+          <p>A sleek and stylish silver Rings for all occasions.</p>
+          <div class="price">$69.99</div>
+          
+        </div>
+      </div>
+      <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Elegant Rings</h3>
+          <p>A beautiful Rings that complements any outfit.</p>
+          <div class="price">$49.99</div>
+          
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Gold Rings</h3>
+          <p>A luxurious gold Rings with intricate design.</p>
+          <div class="price">$99.99</div>
+         
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Silver Rings</h3>
+          <p>A sleek and stylish silver Rings for all occasions.</p>
+          <div class="price">$69.99</div>
+          
+        </div>
+      </div>
+      <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Elegant Rings</h3>
+          <p>A beautiful Rings that complements any outfit.</p>
+          <div class="price">$49.99</div>
+          
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Gold Rings</h3>
+          <p>A luxurious gold Rings with intricate design.</p>
+          <div class="price">$99.99</div>
+         
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Images/img1.jfif" alt="Rings Image">
+        <div class="card-content">
+          <h3>Silver Rings</h3>
+          <p>A sleek and stylish silver Rings for all occasions.</p>
+          <div class="price">$69.99</div>
+          
+        </div>
+      </div>
+        
+  </section>
 
   <footer class="footer">
     <p>&copy; 2024 KIRA Jewelry. All rights reserved.</p>
@@ -279,7 +436,6 @@
     </div>
   </footer>
 
-  <!-- Script for Hamburger Menu Toggle -->
   <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
@@ -287,29 +443,6 @@
     mobileMenu.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
-    const form = document.getElementById('contactForm');
-
-form.addEventListener('submit', async (event) => {
-  event.preventDefault(); // Prevent default form submission
-
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-
-  try {
-    const response = await fetch('http://localhost:3000/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-
-    const result = await response.text();
-    alert(result); // Show success message
-  } catch (error) {
-    alert('Error sending message'); // Show error message
-  }
-});
   </script>
 </body>
 </html>
