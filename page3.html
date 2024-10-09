@@ -133,172 +133,6 @@
     
   }
 
-  /* Section 1 Styling */
-  .section1 {
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 20px 0;
-    flex-wrap: wrap; /* Allow flex items to wrap */
-  }
-
-  .section1-leftdiv {
-    width: 50%;
-    text-align: center;
-  }
-
-  .section1-leftdiv img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 12px;
-  }
-
-  .section1-rightdiv {
-    width: 50%;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .section1-rightdiv div h1 {
-    padding: 20px;
-    font-size: 5rem;
-    color: #792677;
-    font-family: 'Monotype Corsiva', serif; /* Font for section heading */
-  }
-
-  /* Image Container Section */
-  .main-container {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    margin: 25px auto;
-    gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping for responsive design */
-  }
-
-  /* Individual divs styling */
- 
- .image-container-section{
-  margin-top: 50px;
- }
-  .image-container-section h2 {
-    font-size: 2.5rem;
-    color: #ba2867;
-    
-
-    font-family: 'Monotype Corsiva', serif; /* Font for contact heading */
-    text-align: center;
-  }
-
-  .image-container {
-    width: 30%;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    position: relative; /* Position for z-index effect */
-    display: flex; /* Add flexbox for vertical alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text */
-}
-
-.image-container a img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-container a p {
-    color: #792677;
-    text-align: center;
-    font-family: 'Tangerine', serif;
-    display: block;
-    margin-top: 10px; /* Add some space above the paragraph */
-}
-
-
-  /* Hover Effect: Enlarge the container and the image */
-  .image-container:hover {
-    transform: scale(1.1); /* Scale the container */
-    z-index: 10; /* Raise above other elements */
-  }
-
-  .image-container:hover img {
-    transform: scale(1.2); /* Scale the image inside the container */
-  }
-
-  /* About Section Styling */
-  .about {
-    max-width: 90%;
-    margin: 50px auto; /* Centering the section */
-    padding: 20px;
-    text-align: center;
-    font-family: 'Monotype Corsiva', sans-serif; /* Font for about section */
-  }
-
-  .about h2 {
-    font-size: 2.5rem;
-    color: #ba2867;
-    margin-bottom: 20px;
-  }
-
-  .about p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    font-family: 'Tangerine', serif; /* Font for menu toggle */
-
-  }
-
-  /* Contact Section Styling */
-  .contact {
-    max-width: 90%;
-    margin: 50px auto; /* Centering the section */
-    padding: 20px;
-    text-align: center;
-  }
-
-  .contact h2 {
-    font-size: 2.5rem;
-    color: #792677;
-    margin-bottom: 20px;
-    font-family: 'Monotype Corsiva', serif; /* Font for contact heading */
-  }
-
-  .contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-family: 'Century751 SeBd BT', sans-serif; /* Font for contact form */
-  }
-
-  .contact input, .contact textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-
-  .contact button {
-    background-color: #792677;/* Button background color */
-    color: white; /* Button text color */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    width: 30%;
-    margin: 0 auto;
-  }
-
-  .contact button:hover {
-    background-color: #ba2867;  /* Hover button color */
-  }
 
   /* Footer Section Styling */
   /* Footer Section Styling */
@@ -382,13 +216,7 @@
     .icons {
       margin-top: 10px;
     }
-    .section1-leftdiv, .section1-rightdiv {
-      width: 100%;
-    }
-
-    .image-container {
-      width: 45%;
-    }
+   
   }
 
   /* Responsive Design for Mobile Devices */
@@ -407,13 +235,7 @@
       font-size: 1.2rem;
     }
 
-    .section1-rightdiv div h1 {
-      font-size: 1.8rem;
-    }
-
-    .image-container {
-      width: 100%;
-    }
+   
   }
 </style>
 <body>
@@ -444,73 +266,10 @@
       </div>
     </div>
   </header>
+  <h1>
+    Rings
+  </h1>
 
-  <!-- Section 1 -->
-  <section class="section1" id="home">
-    <div class="section1-leftdiv">
-      <img src="./Images/section1.jfif" alt="Section Image"/>
-    </div>
-    <div class="section1-rightdiv">
-      <div>
-        <h1>Choose minimal.</h1><h1> Choose confidence. </h1><h1>Choose KIRA.</h1>
-      </div>  
-    </div>
-  </section>
-
-  <!-- Image Container Section -->
-  <section class="image-container-section" id="Products">
-  <h2>Our Products</h2>
-    <div class="main-container">
-      <!-- First Image Container -->
-       
-      <div class="image-container">
-        <a href="./page1.html">
-        <img src="./Images/img1.jfif" alt="Image 1">
-        <p>Bracelets</p>
-      </a>
-      </div>
-    
-
-      <!-- Second Image Container -->
-      <div class="image-container">
-        <a href="./page2.html">
-          <img src="./Images/img2.jfif" alt="Image 2">
-        <p>Neckless</p>
-        </a>
-        
-      </div>
-    
-   
-
-      <!-- Third Image Container -->
-      <div class="image-container">
-        <a href="./page3.html">
-        <img src="./Images/img3.jfif" alt="Image 3">
-        <p>Rings</p>
-        </a>
-      </div>
-    
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="About">
-    <h2>About KIRA</h2>
-    <p>At KIRA, we believe in the power of simplicity. Our jewelry is thoughtfully designed for those who value elegance in minimalism. Each piece is crafted with precision to complement your individuality, making it the perfect addition to any look. Whether you're dressing up for a special occasion or elevating your everyday style, KIRA brings timeless beauty to your collection. Discover the art of understated luxury with us.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact" id="Contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer Section -->
   <footer class="footer">
     <p>&copy; 2024 KIRA Jewelry. All rights reserved.</p>
     <div class="social-icons">
