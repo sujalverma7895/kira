@@ -517,6 +517,7 @@
       <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/_kira.in/profilecard/?igsh=cGRqbW56eHg1d2Ri" target="_blank"><i class="fab fa-instagram"></i></a>
+      <button onclick="whatsapp()">wjkdhsu</button>
     </div>
   </footer>
 
@@ -551,6 +552,22 @@ form.addEventListener('submit', async (event) => {
     alert('Error sending message'); // Show error message
   }
 });
+    
+
+
+const whatsapp=()=>{
+        
+        // Replace '1234567890' with the full phone number in international format (without '+' or '-') 
+    // and 'Your message' with the message you want to pre-fill.
+    var phoneNumber = "+917895334377"; // Your WhatsApp number in international format
+    var message = "Hello! I would like to know more about your services."; // Optional pre-filled message
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+    
+    // Redirect to WhatsApp
+    window.location.href = whatsappURL;
+    
+        }
+
   </script>
 </body>
 </html>
