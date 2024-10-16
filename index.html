@@ -132,6 +132,17 @@
     color: #ba2867; /* Link text color */
     
   }
+  .offer-section {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Image styling for default desktop view */
+.offer-section img {
+  width: 100%;
+  height: auto; /* Allow height to adjust automatically */
+  object-fit: cover;
+}
 
   /* Section 1 Styling */
   .section1 {
@@ -140,7 +151,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: #ffffff;
-    padding: 20px 0;
+   margin-top: 30px;
     flex-wrap: wrap; /* Allow flex items to wrap */
   }
 
@@ -164,7 +175,7 @@
 
   .section1-rightdiv div h1 {
     padding: 20px;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #792677;
     font-family: 'Monotype Corsiva', serif; /* Font for section heading */
   }
@@ -368,8 +379,8 @@
       padding: 0 20px;
       display: flex;
       position: absolute;
-      bottom: -165px;
-      right: 50px;
+      bottom: -215px;
+      right: 0pxxxxxxxxxxxxxxxx;
       border-radius: 12px;
     }
     
@@ -382,6 +393,9 @@
     .icons {
       margin-top: 10px;
     }
+    .offer-section img {
+    height: 250px; /* Adjust height for smaller screens */
+  }
     .section1-leftdiv, .section1-rightdiv {
       width: 100%;
     }
@@ -407,6 +421,9 @@
       font-size: 1.2rem;
     }
 
+    .offer-section img {
+    height: 150px; /* Further adjust height for mobile screens */
+  }
     .section1-rightdiv div h1 {
       font-size: 1.8rem;
     }
@@ -445,9 +462,11 @@
       </div>
     </div>
   </header>
-
+<section class="offer-section"  id="home">
+<img src="./Images/offer.jfif"/>
+</section>
   <!-- Section 1 -->
-  <section class="section1" id="home">
+  <section class="section1">
     <div class="section1-leftdiv">
       <img src="./Images/section1.jfif" alt="Section Image"/>
     </div>
