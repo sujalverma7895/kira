@@ -139,11 +139,17 @@
 
 /* Image styling for default desktop view */
 .offer-section img {
-  width: 100%;
-  height: auto; /* Allow height to adjust automatically */
-  object-fit: cover;
-}
-
+    display: block; /* Hide desktop offer image on mobile */
+  }
+  
+  .mobile-offer-section {
+    display: none; /* Show the mobile offer image */
+  }
+  
+  .offer-section img {
+    width: 100%; /* Make sure mobile image also takes full width */
+    height: auto;
+  }
   /* Section 1 Styling */
   .section1 {
     height: auto;
@@ -422,7 +428,16 @@
     }
 
     .offer-section img {
-    height: 150px; /* Further adjust height for mobile screens */
+    display: none; /* Hide desktop offer image on mobile */
+  }
+  
+  .mobile-offer-section {
+    display: block; /* Show the mobile offer image */
+  }
+  
+  .mobile-offer-section img {
+    width: 100%; /* Make sure mobile image also takes full width */
+    height: auto;
   }
     .section1-rightdiv div h1 {
       font-size: 1.8rem;
@@ -456,7 +471,7 @@
         <a href="#Products">Products</a>
         <a href="#About">About Us</a> <!-- Corrected this line -->
         <a href="#Contact">Contact</a>
-        <a href="">Blogs</a>
+        <a href="./Blog.html">Blogs</a>
       </nav>
         <a href="#"><i class="fas fa-user"></i></a>
       </div>
@@ -465,6 +480,9 @@
 <section class="offer-section"  id="home">
 <img src="./Images/offer.jfif"/>
 </section>
+<section class="mobile-offer-section"  id="home">
+  <img src="./Images/Kira Website Banner-Mobile-01.jpg"/>
+  </section>
   <!-- Section 1 -->
   <section class="section1">
     <div class="section1-leftdiv">
