@@ -222,6 +222,9 @@
     align-items: center; /* Center items horizontally */
     text-align: center; /* Center text */
 }
+.image-container a{
+  text-decoration: none;
+}
 
 .image-container a img {
     width: 100%;
@@ -234,18 +237,19 @@
     text-align: center;
     font-family: 'Tangerine', serif;
     display: block;
+    font-size: 25px;
     margin-top: 10px; /* Add some space above the paragraph */
 }
 
 
   /* Hover Effect: Enlarge the container and the image */
   .image-container:hover {
-    transform: scale(1.1); /* Scale the container */
+    transform: scale(1.2); /* Scale the container */
     z-index: 10; /* Raise above other elements */
   }
 
   .image-container:hover img {
-    transform: scale(1.2); /* Scale the image inside the container */
+    transform: scale(1.1); /* Scale the image inside the container */
   }
 
   /* About Section Styling */
@@ -552,7 +556,7 @@
     <form>
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <input type="number" placeholder="Your Phone Number" required>
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -575,45 +579,7 @@
     mobileMenu.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
-    const form = document.getElementById('contactForm');
-
-form.addEventListener('submit', async (event) => {
-  event.preventDefault(); // Prevent default form submission
-
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-
-  try {
-    const response = await fetch('http://localhost:3000/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-
-    const result = await response.text();
-    alert(result); // Show success message
-  } catch (error) {
-    alert('Error sending message'); // Show error message
-  }
-});
-    
-
-
-const whatsapp=()=>{
-        
-        // Replace '1234567890' with the full phone number in international format (without '+' or '-') 
-    // and 'Your message' with the message you want to pre-fill.
-    var phoneNumber = "+917895334377"; // Your WhatsApp number in international format
-    var message = "Hello! I would like to know more about your services."; // Optional pre-filled message
-    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-    
-    // Redirect to WhatsApp
-    window.location.href = whatsappURL;
-    
-        }
-
+  
   </script>
 </body>
 </html>
