@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - KIRA Jewelry</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 80px;
+    }
+
+    /* Header Styling */
+    .header {
+      background-color: #ffffff;
+      color: #ba2867;
+      padding: 15px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .header:hover {
+      background-color: #fdfdfd;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .logo img {
+      height: 50px;
+      max-width: 150px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-links {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #792677;
+      font-size: 1.1rem;
+      padding-bottom: 5px;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ba2867;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
+    .icons a {
+      color: #792677;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .icons a:hover {
+      color: #ba2867;
+      transform: scale(1.1);
+    }
+
+    /* About Section Styling */
+    .about-section {
+      padding: 40px 20px;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .about-section h1 {
+      font-size: 2.5rem;
+      color: #ba2867;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Monotype Corsiva', serif;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .footer p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .fa-facebook { color: #3b5998; }
+    .fa-instagram { color: #e4405f; }
+    .fa-whatsapp { color: #25D366; }
+
+    .footer .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .footer .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 10;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        color: #792677;
+        font-size: 1.2rem;
+      }
+
+      .about-section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="./Images/Kira Logo.png" alt="KIRA Logo"/>
+      </div>
+      <div class="icons">
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-links" id="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./page1.html">Necklace</a>
+          <a href="./page2.html">Rings</a>
+          <a href="./page3.html">Bracelets</a>
+          <a href="./page4.html">Earrings</a>
+        </nav>
+        <a href="#"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="about-section">
+    <h1>About KIRA</h1>
+    <p>Welcome to KIRA, where tradition meets innovation to redefine jewelry for the modern era. Born in the heart of Indore, KIRA was founded by Kartik Pandey and Simmi Sharma, who share a vision to transform how people experience and connect with jewelry. With three generations of jewelry craftsmanship behind us, we bring a legacy of expertise, artistry, and a deep respect for the craft. KIRA represents not only the timeless art of jewelry-making but also a fresh, forward-thinking approach to design and quality.</p>
+    <p>Kartik Pandey, carrying forward his family’s rich heritage in jewelry, joined forces with Simmi Sharma to create something new yet rooted in tradition—a brand that speaks to those who value subtle sophistication and modern elegance. Together, we envision KIRA as a symbol of empowerment, style, and personal expression. Every piece we create is a blend of minimalism and grace, designed to be as versatile as it is beautiful, suitable for both everyday wear and special occasions.</p>
+    <p>Our commitment to quality is unwavering. Each piece of KIRA jewelry is crafted with precision, care, and attention to detail, using the finest materials. We aim to create pieces that feel like an extension of the wearer’s personality, enhancing their natural beauty and making every moment a little more extraordinary. At KIRA, jewelry is more than an accessory—it’s a story, a memory, and a part of you.</p>
+    <p>We are here to revolutionize the jewelry market by bringing a fresh perspective to luxury. Our collections are thoughtfully curated to embrace the power of simplicity, making it possible for every piece to shine in its own unique way. As we look to the future, our goal remains the same: to create timeless, elegant jewelry that resonates with today’s generation and honors the legacy of those before us.</p>
+    <p>Thank you for being a part of KIRA’s journey. We’re honored to bring our craft to your life’s moments, both big and small.</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 KIRA jewellery. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
