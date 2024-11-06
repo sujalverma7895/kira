@@ -168,7 +168,15 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-        .nav-links.active {
+       
+  
+    .nav-links {
+      flex-direction: column;
+      margin: 10px 0;
+      display: none;
+    }
+
+    .nav-links.active {
       background-color: #ffffff;
       padding: 0 20px;
       display: flex;
@@ -177,14 +185,13 @@
       right: 0px;
       border-radius: 12px;
     }
+    
+    .menu-toggle {
+      display: block;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
 
-  
-
-      .menu-toggle {
-        display: block;
-        color: #792677;
-        font-size: 1.2rem;
-      }
 
       .about-section h1 {
         font-size: 2rem;
