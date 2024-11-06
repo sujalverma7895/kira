@@ -3,231 +3,232 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Styled Header and Card Section</title>
+  <title>Styled Header and Blog Section</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     /* General Reset */
- @font-face {
-   font-family: 'Monotype Corsiva';
-   src: url('./fonts/monotype-corsiva.ttf') format('truetype');
- }
- 
- @font-face {
-   font-family: 'Century751 SeBd BT';
-   src: url('./fonts/century751-sebd-bt.ttf') format('truetype');
- }
- 
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
- 
- body {
-   font-family: 'Tangerine', serif;
-   background-color: #ffffff;
-   max-width: 1300px;
-   margin: 0 auto;
-   padding-top: 80px; /* Adjust padding-top to header height */
- }
- 
- /* Header Styling */
- .header {
-   background-color: #ffffff;
-   color: #ba2867;
-   padding: 15px 0;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   width: 100%;
-   z-index: 1000;
-   font-family: 'Monotype Corsiva', serif;
- }
- 
- .container {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   max-width: 1200px;
-   margin: auto;
-   padding: 0 20px;
- }
- 
- .logo img {
-   height: 50px;
-   max-width: 150px;
-   width: auto;
-   transition: height 0.3s ease, max-width 0.3s ease;
- }
- 
- .nav-links {
-   flex: 2;
-   display: flex;
-   justify-content: center;
-   gap: 20px;
- }
- 
- .nav-links a {
-   text-decoration: none;
-   color: #792677;
-   font-size: 1.1rem;
-   transition: color 0.3s ease, border-bottom 0.3s ease;
-   padding-bottom: 2px;
-   font-family: 'Century751 SeBd BT', sans-serif;
- }
- 
- .nav-links a:hover {
-   color: #ba2867;
-   border-bottom: 2px solid #ba2867;
- }
- 
- .menu-toggle {
-   display: none;
-   cursor: pointer;
-   font-size: 1.8rem;
-   color: #792677;
-   font-family: 'Tangerine', serif;
- }
- 
- .menu-toggle:hover {
-   color: #ba2867;
- }
- 
- .icons {
-   display: flex;
-   justify-content: flex-end;
-   gap: 15px;
-   padding-left: 20px;
- }
- 
- .icons a {
-   color: #792677;
-   font-size: 1.5rem;
-   transition: color 0.3s ease, transform 0.3s ease;
- }
- 
- .icons a:hover {
-   color: #ba2867;
-   transform: scale(1.1);
- }
- 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
- 
- .footer {
-   background-color: #f8f8f8;
-   padding: 20px;
-   text-align: center;
-   margin-top: 50px;
-   font-family: 'Century751 SeBd BT', sans-serif;
- }
- 
- .footer p {
-   color: #555;
-   font-size: 1rem;
- }
- 
- .social-icons {
-   margin-top: 20px;
- }
- 
- .footer .social-icons a {
-   margin: 0 10px;
-   font-size: 1.5rem;
-   transition: transform 0.3s ease;
- }
- 
- .footer .social-icons a:hover {
-   transform: scale(1.2);
- }
- 
- /* Specific icon colors */
- .fa-facebook {
-   color: #3b5998;
- }
- 
- .fa-instagram {
-   color: #e4405f;
- }
- 
- .fa-whatsapp {
-   color: #25D366;
- }
- 
- /* Responsive Design */
- @media (max-width: 768px) {
-   .container {
-     flex-wrap: wrap;
-     text-align: center;
-     position: relative;
-   }
- 
-   .logo img {
-     height: 35px;
-     max-width: 100px;
-   }
- 
-   .nav-links {
-     flex-direction: column;
-     margin: 10px 0;
-     display: none;
-   }
- 
-   .nav-links.active {
-     background-color: #ffffff;
-     padding: 0 20px;
-     display: flex;
-     position: absolute;
-     bottom: -165px;
-     right: 50px;
-     border-radius: 12px;
-   }
- 
-   .menu-toggle {
-     display: block;
-     font-size: 1.2rem;
-   }
- 
-   .icons {
-     margin-top: 10px;
-   }
- 
-   
- 
- 
- }
- 
- @media (max-width: 480px) {
-   .nav-links a {
-     font-size: 1rem;
-   }
- 
-   .logo img {
-     height: 30px;
-     max-width: 80px;
-   }
- 
-   .icons a {
-     font-size: 1.2rem;
-   }
- 
-  
- }
- @media(max-width:320px){
-   .nav-links a{
-     font-size:0.8rem;
-   }
-   .logo img{
-     height: 25px;
-     max-width: 60px;
-   }
-   .icons a{
-     font-size: 0.9rem;
-   }
-  
- }
-   </style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f5;
+      color: #333;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding-top: 80px;
+      overflow-x: hidden;
+    }
+
+    /* Header Styling */
+    .header {
+      background-color: #ffffff;
+      color: #ba2867;
+      padding: 15px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .header:hover {
+      background-color: #fdfdfd;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .logo img {
+      height: 50px;
+      max-width: 150px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-links {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #792677;
+      font-size: 1.1rem;
+      padding-bottom: 5px;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ba2867;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
+    .icons a {
+      color: #792677;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .icons a:hover {
+      color: #ba2867;
+      transform: scale(1.1);
+    }
+
+    /* Blog Section Styling */
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      color: #ba2867;
+      margin-bottom: 20px;
+    }
+
+    section ul {
+      margin-left: 20px;
+      margin-top: 10px;
+      list-style-type: disc;
+    }
+
+    section ul li {
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .highlight {
+      color: #ba2867;
+      font-weight: bold;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+
+    .footer p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .social-icons a {
+      margin: 0 15px;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Specific icon colors */
+    .fa-facebook { color: #3b5998; }
+    .fa-instagram { color: #e4405f; }
+    .fa-whatsapp { color: #25D366; }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        display: none;
+        margin-top: 10px;
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 10px;
+        position: absolute;
+        right: 20px;
+        top: 65px;
+        width: 50%;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links a {
+        font-size: 1rem;
+      }
+
+      .icons a {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -235,33 +236,76 @@
       <div class="logo">
         <img src="./Images/Kira Logo.png" alt="Logo"/>
       </div>
-      
-      
       <div class="icons">
         <div class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
-          </div>
-          <nav class="nav-links" id="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./page1.html">Neckless</a>
-            <a href="./page2.html">Rings</a>
-            <a href="./page3.html">Bracelets</a>
-            <a href="./page4.html">Earrings</a>
-          </nav>
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-links" id="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./page1.html">Necklace</a>
+          <a href="./page2.html">Rings</a>
+          <a href="./page3.html">Bracelets</a>
+          <a href="./page4.html">Earrings</a>
+        </nav>
         <a href="#"><i class="fas fa-user"></i></a>
       </div>
     </div>
   </header>
+
+  <section>
+    <h2>Why Choose Sterling Silver for Everyday Use?</h2>
+    <img src="./Images/firstblog.jfif" alt="Sterling Silver Jewelry Image" />
+    <p>Sterling silver is an excellent choice for daily wear, balancing beauty, durability, and affordability. Here are some reasons why it stands out:</p>
+    <ul>
+      <li><span class="highlight">Durable Yet Affordable</span>: strong enough for everyday wear while remaining cost-effective compared to gold or platinum.</li>
+      <li><span class="highlight">Hypoallergenic Properties</span>: Perfect for sensitive skin, reducing the risk of irritation and allergies.</li>
+      <li><span class="highlight">Timeless Style</span>: A versatile look that complements any outfit, suitable for casual or formal events.</li>
+      <li><span class="highlight">Easy Maintenance</span>: Tarnish can be removed with simple cleaning, keeping the jewelry shiny with regular wear.</li>
+      <li><span class="highlight">Eco-Friendly</span>: Recyclable material that supports sustainable fashion and lessens environmental impact.</li>
+    </ul>
+    <p>Choosing sterling silver for daily use offers a lasting blend of elegance, ease, and sustainability. Embrace its beauty and make it a part of your everyday style!</p>
+  </section>
+  <section>
+    <p><span class="highlight">Why Wearing Jewelry Boosts Confidence: The KIRA Way</span ></p>
+    <img src="./Images/secondblog.jfif" alt="Jewelry and Confidence Image" />
+
+    <p>
+      Jewelry has always been more than just an accessory. It can be a powerful tool to enhance your confidence and express your individuality. At KIRA, we believe that the right piece of jewelry can not only elevate your look but also empower you in your everyday life. Here’s why wearing jewelry from our minimalist collection can make a difference in how you feel about yourself:
+    </p>
+    <ul>
+      <li><span class="highlight">Personal Expression, Reinvented</span>: Jewelry is a form of self-expression, and at KIRA, we embrace minimalist designs that speak to your inner confidence. Our jewelry isn’t loud or ostentatious, but rather subtle, elegant, and thoughtfully designed to reflect the wearer’s personality.</li>
+      <li><span class="highlight">The Power of Minimalism</span >: Minimalist jewelry doesn’t demand attention but draws people in with its quiet sophistication. The KIRA design language is rooted in the belief that simplicity is strength.</li>
+      <li><span class="highlight">Jewelry as a Confidence Anchor</span >: KIRA designs jewelry that becomes part of your routine—a piece you reach for every day to complete your look, acting as a confidence anchor and reminding you of your inner strength.</li>
+      <li><span class="highlight">Comfort Meets Style</span >: Confidence comes from feeling good. KIRA’s pieces are lightweight and designed for all-day wear, so you can move through your day without feeling weighed down.</li>
+      <li><span class="highlight">The Symbolism of Jewelry</span >: Jewelry can symbolize personal milestones or values. KIRA’s minimalist designs allow you to wear pieces that resonate with your journey.</li>
+      <li><span class="highlight">Sustainable and Ethical Craftsmanship</span >: KIRA uses sustainable materials and ethical craftsmanship, letting you feel good about your choices and aligning with your values.</li>
+    </ul>
+    <p>Wearing jewelry is about more than aesthetics; it’s about how it makes you feel. Discover the power of KIRA jewelry today, and let every piece remind you of your inner strength and timeless beauty.</p>
+  </section>
   
+  <section>
+    <p><span class="highlight">Why Consider KIRA for Minimalist Jewelry?</span ></p>
+    <img src="./Images/thirdblog.jfif" alt="Minimalist Jewelry by KIRA Image" />
 
-
+    <p>
+      At KIRA, we take minimalist design to the next level by blending simplicity with meaningful, intentional craftsmanship. Here’s why KIRA is the ideal choice for your minimalist jewelry collection:
+    </p>
+    <ul>
+      <li><span class="highlight">Unique Design Philosophy</span >: KIRA’s philosophy centers on empowering you with jewelry that reflects inner strength and beauty. Each piece is crafted to be lightweight, comfortable, and versatile.</li>
+      <li><span class="highlight">Quality Materials</span >: Using only high-quality materials, KIRA’s jewelry is built to last. From sterling silver to hypoallergenic metals, our pieces retain their shine and elegance through daily wear.</li>
+      <li><span class="highlight">Timeless Pieces for Everyday Wear</span >: Designed for everyday wear, KIRA’s pieces add a touch of elegance to any outfit, making them suitable for any occasion.</li>
+      <li><span class="highlight">Sustainable and Ethical Practices</span >: KIRA is committed to sustainability, using eco-friendly materials and ethical production methods to ensure that your purchase supports responsible practices.</li>
+    </ul>
+    <p>Minimalist jewelry enhances your natural beauty without overpowering it. Elevate your collection with KIRA, where minimalist design meets timeless elegance.</p>
+  </section>
+  
   <footer class="footer">
-    <p>&copy; 2024 KIRA Jewelry. All rights reserved.</p>
+    <p>© 2024 Kira Jewelry. All rights reserved.</p>
     <div class="social-icons">
       <a href="https://www.facebook.com/share/4Vnu4Myjc1Xm6wYz/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/_kira.in/profilecard/?igsh=cGRqbW56eHg1d2Ri" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
+  </div>
   </footer>
 
   <script>
