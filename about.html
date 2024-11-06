@@ -168,20 +168,15 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        gap: 15px;
-        background-color: #fff;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        padding: 20px 0;
-        z-index: 10;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      }
+        .nav-links.active {
+      background-color: #ffffff;
+      padding: 0 20px;
+      display: flex;
+      position: absolute;
+      bottom: -215px;
+      right: 0px;
+      border-radius: 12px;
+    }
 
       .nav-links.active {
         display: flex;
