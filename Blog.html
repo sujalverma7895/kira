@@ -192,33 +192,50 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .container {
-        flex-wrap: wrap;
-        text-align: center;
-      }
+      
+    .container {
+      flex-wrap: wrap;
+      text-align: center;
+      position: relative;
+    }
 
-      .nav-links {
-        flex-direction: column;
-        display: none;
-        margin-top: 10px;
-        background: #ffffff;
-        border-radius: 8px;
-        padding: 10px;
-        position: absolute;
-        right: 0px;
-        top: -290px;
-        width: 50%;
-      }
+    .logo img {
+      height: 35px; /* Smaller logo height on tablet */
+      max-width: 100px; /* Smaller max-width */
+    }
 
-      .nav-links.active {
-        display: flex;
-      }
+  
+    .nav-links {
+      flex-direction: column;
+      margin: 10px 0;
+      display: none;
+    }
 
-      .menu-toggle {
-        display: block;
-        color: #792677;
-        font-size: 1.2rem;
-      }
+    .nav-links.active {
+      background-color: #ffffff;
+      padding: 0 20px;
+      display: flex;
+      position: absolute;
+      bottom: -375px;
+      right: 0px;
+      border-radius: 12px;
+    }
+    
+    .menu-toggle {
+      display: block;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #792677;
+    }
+
+    .uselogo{
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+    .icons {
+      margin-top: 10px;
+    }
     }
 
     @media (max-width: 480px) {
@@ -250,7 +267,7 @@
           <a href="./page3.html">Bracelets</a>
           <a href="./page4.html">Earrings</a>
         </nav>
-        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"class="uselogo"><i class="fas fa-user"></i></a>
       </div>
     </div>
   </header>
@@ -269,7 +286,7 @@
     <p>Choosing sterling silver for daily use offers a lasting blend of elegance, ease, and sustainability. Embrace its beauty and make it a part of your everyday style!</p>
   </section>
   <section>
-    <p><span class="highlight">Why Wearing Jewelry Boosts Confidence: The KIRA Way</span ></p>
+    <h2>Why Wearing Jewelry Boosts Confidence: The KIRA Way</h2 >
     <img src="./Images/secondblog.jfif" alt="Jewelry and Confidence Image" />
 
     <p>
@@ -287,7 +304,7 @@
   </section>
   
   <section>
-    <p><span class="highlight">Why Consider KIRA for Minimalist Jewelry?</span ></p>
+    <h2>Why Consider KIRA for Minimalist Jewelry?</h2 >
     <img src="./Images/thirdblog.jfif" alt="Minimalist Jewelry by KIRA Image" />
 
     <p>

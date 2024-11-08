@@ -22,96 +22,103 @@
     }
 
     /* Header Styling */
-    .header {
-      background-color: #ffffff;
-      color: #ba2867;
-      padding: 15px 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      z-index: 1000;
-      transition: background-color 0.3s ease;
-    }
+  .header {
+    background-color: #ffffff; /* Header background color */
+    color: #ba2867; /* Default text color */
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Monotype Corsiva', serif; /* Font for the header */
+  }
 
-    .header:hover {
-      background-color: #fdfdfd;
-    }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
 
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-    }
+  /* Logo Styling */
+  .logo {
+    flex: 1;
+    text-align: left;
+  }
 
-    .logo img {
-      height: 50px;
-      max-width: 150px;
-      transition: transform 0.3s ease;
-    }
+  .logo img {
+    height: 50px;
+    max-width: 150px;
+    width: auto;
+    transition: height 0.3s ease, max-width 0.3s ease;
+  }
 
-    .logo img:hover {
-      transform: scale(1.1);
-    }
+  /* Navigation Links Styling */
+  .nav-links {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 
-    .nav-links {
-      flex: 2;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-    }
+  .nav-links a {
+    text-decoration: none;
+    color: #792677; 
+    font-size: 1.1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 2px;
+    font-family: 'Century751 SeBd BT', sans-serif; /* Font for navigation links */
+  }
 
-    .nav-links a {
-      text-decoration: none;
-      color: #792677;
-      font-size: 1.1rem;
-      padding-bottom: 5px;
-      position: relative;
-    }
+  .nav-links a:hover {
+    color: #ba2867; 
+    border-bottom: 2px solid #ba2867; /* Border effect on hover */
+  }
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: #ba2867;
-      transition: width 0.3s ease;
-    }
+  .nav-icon {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+  /* Icon Section Styling */
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-left: 20px;
+  }
 
-    .menu-toggle {
-      display: none;
-      cursor: pointer;
-      font-size: 1.8rem;
-      color: #333;
-    }
+  .icons a {
+    color: #792677; 
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
 
-    .icons {
-      display: flex;
-      justify-content: flex-end;
-      gap: 20px;
-    }
+  .icons a:hover {
+    color: #ba2867; 
 
-    .icons a {
-      color: #792677;
-      font-size: 1.5rem;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
+    transform: scale(1.1); /* Scale on hover */
+  }
 
-    .icons a:hover {
-      color: #ba2867;
-      transform: scale(1.1);
-    }
+  /* Hamburger Menu Styling */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #792677; /* Hover color */
+    font-family: 'Tangerine', serif; /* Font for menu toggle */
+  }
+
+  .menu-toggle:hover {
+    
+    color: #ba2867; /* Link text color */
+    
+  }
 
     /* About Section Styling */
     .about-section {
@@ -169,11 +176,18 @@
     /* Responsive Design */
     @media (max-width: 768px) {
        
-        .container {
+      .container {
       flex-wrap: wrap;
       text-align: center;
       position: relative;
     }
+
+    .logo img {
+      height: 35px; /* Smaller logo height on tablet */
+      max-width: 100px; /* Smaller max-width */
+    }
+
+  
     .nav-links {
       flex-direction: column;
       margin: 10px 0;
@@ -185,7 +199,7 @@
       padding: 0 20px;
       display: flex;
       position: absolute;
-      bottom: -290px;
+      bottom: -255px;
       right: 0px;
       border-radius: 12px;
     }
@@ -196,6 +210,13 @@
       font-size: 1.2rem;
     }
 
+    .uselogo{
+      display: flex;
+      align-items: center;
+    }
+    .icons {
+      margin-top: 10px;
+    }
 
       .about-section h1 {
         font-size: 2rem;
@@ -220,7 +241,7 @@
           <a href="./page3.html">Bracelets</a>
           <a href="./page4.html">Earrings</a>
         </nav>
-        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#" class="uselogo"><i class="fas fa-user"></i></a>
       </div>
     </div>
   </header>
