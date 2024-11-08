@@ -198,60 +198,63 @@
 
   /* Individual divs styling */
  
- .image-container-section{
+  .image-container-section {
   margin-top: 50px;
- }
-  .image-container-section h2 {
-    font-size: 2.5rem;
-    color: #792677;
-  
-    
-
-    font-family: 'Monotype Corsiva', serif; /* Font for contact heading */
-    text-align: center;
-  }
-
-  .image-container {
-    width: 22%;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    position: relative; /* Position for z-index effect */
-    display: flex; /* Add flexbox for vertical alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text */
 }
-.image-container a{
+.image-container-section h2 {
+  font-size: 2.5rem;
+  color: #792677;
+  font-family: 'Monotype Corsiva', serif;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.image-container {
+  width: 22%;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-container a {
   text-decoration: none;
 }
 
 .image-container a img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
 .image-container a p {
-    color: #792677;
-    text-align: center;
-    font-family: 'Tangerine', serif;
-    display: block;
-    font-size: 25px;
-    margin-top: 10px; /* Add some space above the paragraph */
+  color: #792677;
+  font-family: 'Tangerine', serif;
+  font-size: 25px;
+  margin-top: 10px;
 }
 
+.image-container:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
 
-  /* Hover Effect: Enlarge the container and the image */
-  .image-container:hover {
-    transform: scale(1.2); /* Scale the container */
-    z-index: 10; /* Raise above other elements */
-  }
+.image-container:hover img {
+  transform: scale(1.1);
+}
 
-  .image-container:hover img {
-    transform: scale(1.1); /* Scale the image inside the container */
-  }
 
   /* About Section Styling */
   .about {
