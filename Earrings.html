@@ -129,6 +129,8 @@
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    overflow: hidden;
    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   position: relative; /* To position the button at the bottom */
+  padding-bottom: 50px; /* Add some padding to prevent overlap */
  }
  
  .card img {
@@ -148,16 +150,12 @@
    margin-bottom: 10px;
  }
  
- .card-content .p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 15px;
-}
-.material {
-  color: #792677; /* Light pink color for material information */
-  font-weight: bold;
-  margin-top: 10px;
-}
+ .card-content p {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 15px;
+ }
+ 
  .card-content .price {
    font-size: 1.2rem;
    color: #ba2867;
@@ -184,6 +182,30 @@
    transform: translateY(-5px);
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
  }
+ .add-to-cart-btn {
+  display: inline-block;
+  width: calc(100% - 20px); /* Optional: Add margin inside the card width */
+  padding: 10px;
+  color: #ffffff;
+  background-color: #792677;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  position: absolute;
+  bottom: 10px; /* Position the button 10px from the bottom */
+  left: 10px; /* Center-align with optional margin */
+  right: 10px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ba2867;
+  transform: scale(1.05);
+}
+
  
  .footer {
    background-color: #f8f8f8;
@@ -303,7 +325,6 @@
    }
    .card img{
      height: 285px; /* Further adjust image height for mobile view */
-     
    }
  }
    </style>
@@ -323,108 +344,41 @@
           <nav class="nav-links" id="nav-links">
             <a href="./index.html">Home</a>
             <a href="./about.html">About Us</a> 
-            <a href="./page2.html">Ringes</a>
-            <a href="./page3.html">Bracelets</a>
-            <a href="./page4.html">Earrings</a>
+            <a href="./Necklace.html">Necklace</a>
+            <a href="./Rings.html">Rings</a>
+            <a href="./Bracelet.html">Bracelets</a>
           </nav>
         <a href="#"><i class="fas fa-user"></i></a>
       </div>
     </div>
   </header>
+  
 
   <!-- Card Section -->
   <section class="card-section">
     <div class="card">
-      <img src="./Images/neck1.jfif" alt="Neckless Image">
+      <img src="./Images/butterfly_er.jfif" alt="Ear Rings Image">
       <div class="card-content">
-        <h3>Butterfly Necklace</h3>
-        <p class="p">Featuring a finely crafted butterfly pendant adorned with shimmering details. Perfect for adding to your everyday style.
-          </p>
-          <p class="material">Material: 925 Sterling Silver</p>
-        <div class="price">Price: ₹1699</div>
+        <h3>KIRA Butterfly Earrings</h3>
+        <p>Material: Rose Gold Plated with Cubic Zirconia and Mother-of-Pearl
+          Shipping: Available all over India</p>
+          <div class="price">Price: ₹99</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         
       </div>
     </div>
 
     <div class="card">
-      <img src="./Images/neck2.jfif" alt="Neckless Image">
+      <img src="./Images/img4.jfif" alt="Ear Rings Image">
       <div class="card-content">
-        <h3> Evil Eye Necklace</h3>
-        <p class="p">Crafted in 925 silver, the KIRA Evil Eye Necklace features a sleek eye-shaped pendant with white stones and a striking blue centre.
-          </p>
-          <p class="material">Material: 925 Sterling Silver</p>
-        <div class="price">Price: ₹1799</div>
+        <h3>Gold Ear Rings</h3>
+        <p>A luxurious gold Ear Rings with intricate design.</p>
+        <div class="price">Price: ₹99</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
        
       </div>
     </div>
-
-   
         
-    <div class="card">
-      <img src="./Images/neck3.jpg" alt="Neckless Image">
-      <div class="card-content">
-        <h3>5 Dimond Neck peace </h3>
-        <p class="p">
-          An elegant 5 Dimond Neck peace  that adds sparkle to any outfit.</p>
-          <p class="material">Material: 925 Sterling Silver</p>
-        <div class="price">Price: ₹2199</div>
-        
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./Images/neck4.jpg" alt="Neckless Image">
-      <div class="card-content">
-        <h3>Leaf & Trunk Necklace </h3>
-        <p class="p">The necklace in 925 sterling silver features a modern bar design with delicate leaf pendants. </p>
-        <p class="material">
-          Material: 925 Sterling </p>
-        <div class="price">Price: ₹1199</div>
-       
-      </div>
-    </div><div class="card">
-      <img src="./Images/neck5.jpg" alt="Neckless Image">
-      <div class="card-content">
-        <h3>Beads  & Charm Necklace </h3>
-        <p class="p">This necklace features 925 silver beads on a sleek chain with a small charm. 
-        </p>
-        <p class="material">Material: 925 Sterling Silver</p>
-        <div class="price">Price: ₹1199</div>
-        
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./Images/neck6.jpg" alt="Neckless Image">
-      <div class="card-content">
-        <h3>7 Dimond Neck peace </h3>
-        <p class="p"> An elegant 7 Dimond Neck peace  that adds sparkle to any outfit..</p>
-        <p class="material">Material: 925 Sterling Silver</p>
-        <div class="price">Price: ₹2599</div>
-       
-      </div>
-    </div><div class="card">
-      <img src="./Images/neck7.jpg" alt="Neckless Image">
-      <div class="card-content">
-        <h3>Minimalist Chain        </h3>
-        <p class="p">An elegant Minimalist Chain crafted from 925 sterling silver for a refined, minimalist look.        </p>
-        <p class="material">
-          Material: 925 Sterling Silver</p>
-        <div class="price">Price: ₹1099</div>
-        
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./Images/neck8.jpg" alt="Neckless Image">
-      <div class="card-content">
-        <h3>Perl Silver Necklace         </h3>
-        <p class="p">An elegant Perl Necklace that adds sparkle to any outfit.</p>
-        <p class="material">Material: 925 Sterling </p>
-        <div class="price">Price: ₹1199</div>
-       
-      </div>
-    </div>
   </section>
 
   <footer class="footer">
