@@ -324,7 +324,98 @@
   .contact button:hover {
     background-color: #ba2867;  /* Hover button color */
   }
-
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* To position the button at the bottom */
+   padding-bottom: 50px; /* Add some padding to prevent overlap */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 310px; /* Default for larger screens */
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem;
+    color: #792677;
+    font-family: 'Monotype Corsiva', serif;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .card-content .price {
+    font-size: 1.2rem;
+    color: #ba2867;
+    margin-bottom: 10px;
+  }
+  
+  .card-content .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #ffffff;
+    background-color: #792677;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-content .btn:hover {
+    background-color: #ba2867;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  .add-to-cart-btn {
+   display: inline-block;
+   width: calc(100% - 20px); /* Optional: Add margin inside the card width */
+   padding: 10px;
+   color: #ffffff;
+   background-color: #792677;
+   border: none;
+   border-radius: 4px;
+   text-align: center;
+   font-size: 1rem;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.2s;
+   position: absolute;
+   bottom: 10px; /* Position the button 10px from the bottom */
+   left: 10px; /* Center-align with optional margin */
+   right: 10px;
+ }
+ 
+ .add-to-cart-btn:hover {
+   background-color: #ba2867;
+   transform: scale(1.05);
+ }
+ 
   /* Footer Section Styling */
   /* Footer Section Styling */
   .footer {
@@ -417,6 +508,9 @@
     .image-container {
       width: 45%;
     }
+    .card img {
+      height: 360px; /* Further adjust image height for mobile view */
+    }
   }
 
   /* Responsive Design for Mobile Devices */
@@ -453,6 +547,9 @@
 
     .image-container {
       width: 100%;
+    }
+    .card img {
+      height: 285px; /* Further adjust image height for mobile view */
     }
   }
 </style>
@@ -502,52 +599,255 @@
       </div>  
     </div>
   </section>
-
-  <!-- Image Container Section -->
-  <section class="image-container-section" id="Products">
-  <h2>Our Products</h2>
-    <div class="main-container">
-      
+   <!-- Image Container Section -->
+   <section class="image-container-section" id="Products">
+    <h2>Our Products</h2>
+      <div class="main-container">
+        
+         
+      <!-- First Image Container -->
+      <div class="image-container">
+        <a href="./Necklace.html">
+        <img src="./Images/img1.jfif" alt="Image 1">
+        <p>Neckless</p>
+      </a>
+      </div>
+    
        
-    <!-- First Image Container -->
-    <div class="image-container">
-      <a href="./Necklace.html">
-      <img src="./Images/img1.jfif" alt="Image 1">
-      <p>Neckless</p>
-    </a>
+      
+      <!-- Second Image Container -->
+      <div class="image-container">
+        <a href="./Rings.html">
+          <img src="./Images/img2.jfif" alt="Image 2">
+          <p>Rings</p>
+        </a>
+        
+      </div>
+       
+       <!-- Third Image Container -->
+        
+       <div class="image-container">
+        <a href="./Bracelet.html">
+        <img src="./Images/img3.jfif" alt="Image 3">
+        <p>Bracelets</p>
+        </a>
+      </div>
+       <!-- Third Image Container -->
+        
+       <div class="image-container">
+        <a href="./Earrings.html">
+        <img src="./Images/img4.jfif" alt="Image 3">
+        <p>Ear Rings</p>
+        </a>
+      </div>
+       
+      </div>
+    </section>
+  
+  
+  <section class="card-section">
+    <div class="card">
+      <img src="./Images/neck1.jfif" alt="Necklace Image">
+      <div class="card-content">
+        <h3>Butterfly Necklace</h3>
+        <p class="p">Featuring a finely crafted butterfly pendant adorned with shimmering details. Perfect for adding to your everyday style.</p>
+        <p class="material">Material: 925 Sterling Silver</p>
+        <div class="price">Price: ₹1699</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      </div>
     </div>
   
-     
+    <div class="card">
+      <img src="./Images/neck2.jfif" alt="Necklace Image">
+      <div class="card-content">
+        <h3>Evil Eye Necklace</h3>
+        <p class="p">Crafted in 925 silver, the KIRA Evil Eye Necklace features a sleek eye-shaped pendant with white stones and a striking blue center.</p>
+        <p class="material">Material: 925 Sterling Silver</p>
+        <div class="price">Price: ₹1799</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="./Images/neck3.jpg" alt="Necklace Image">
+      <div class="card-content">
+        <h3>5 Solitaire Necklace</h3>
+        <p class="p">An elegant 5 Solitaire necklace that adds sparkle to any outfit.</p>
+        <p class="material">Material: 925 Sterling Silver</p>
+        <div class="price">Price: ₹2199</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="./Images/neck4.jpg" alt="Necklace Image">
+      <div class="card-content">
+        <h3>Leaf & Trunk Necklace</h3>
+        <p class="p">This necklace features a modern bar design with delicate leaf pendants.</p>
+        <p class="material">Material: 925 Sterling Silver</p>
+        <div class="price">Price: ₹1199</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="./Images/neck5.jpg" alt="Necklace Image">
+      <div class="card-content">
+        <h3>Beads & Charm Necklace</h3>
+        <p class="p">This necklace features 925 silver beads on a sleek chain with a small charm.</p>
+        <p class="material">Material: 925 Sterling Silver</p>
+        <div class="price">Price: ₹1199</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="./Images/neck6.jpg" alt="Necklace Image">
+      <div class="card-content">
+        <h3>7 Solitaire Necklace</h3>
+        <p class="p">An elegant 7 Solitaire necklace that adds sparkle to any outfit.</p>
+        <p class="material">Material: 925 Sterling Silver</p>
+        <div class="price">Price: ₹2599</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="./Images/neck7.jpg" alt="Necklace Image">
+      <div class="card-content">
+        <h3>Minimalist Chain</h3>
+        <p class="p">An elegant Minimalist Chain crafted from 925 sterling silver for a refined look.</p>
+        <p class="material">Material: 925 Sterling Silver</p>
+        <div class="price">Price: ₹1099</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="./Images/neck8.jpg" alt="Necklace Image">
+      <div class="card-content">
+        <h3>Perl Silver Necklace</h3>
+        <p class="p">An elegant Perl Necklace that adds sparkle to any outfit.</p>
+        <p class="material">Material: 925 Sterling Silver</p>
+        <div class="price">Price: ₹1199</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      </div>
+    </div>
     
-    <!-- Second Image Container -->
-    <div class="image-container">
-      <a href="./Rings.html">
-        <img src="./Images/img2.jfif" alt="Image 2">
-        <p>Rings</p>
-      </a>
+  <div class="card">
+    <img src="./Images/bracelet1.jfif" alt="Bracelet Image">
+    <div class="card-content">
+      <h3>Trinity Bracelet</h3>
+      <p class="p">Featuring a tri-tone blend of gold, silver, and rose gold. Its elegant interwoven chains add a subtle shine.</p>
+      <p class="material">Material: 925 Sterling Silver</p>
+      <div class="price">Price: ₹999</div>
+      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
       
     </div>
-     
-     <!-- Third Image Container -->
-      
-     <div class="image-container">
-      <a href="./Bracelet.html">
-      <img src="./Images/img3.jfif" alt="Image 3">
-      <p>Bracelets</p>
-      </a>
-    </div>
-     <!-- Third Image Container -->
-      
-     <div class="image-container">
-      <a href="./Earrings.html">
-      <img src="./Images/img4.jfif" alt="Image 3">
-      <p>Ear Rings</p>
-      </a>
-    </div>
-     
-    </div>
-  </section>
+  </div>
 
+  <div class="card">
+    <img src="./Images/img3.jfif" alt="Bracelet Image">
+    <div class="card-content">
+      <h3>Butterfly Bracelet</h3>
+      <p  class="p">An elegant floral Butterfly that adds sparkle to any outfit.</p>
+      <p class="material">Material: 925 Sterling Silver</p>
+      <div class="price">Price: ₹1999</div>
+      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./Images/bracelet3.jpg" alt="Bracelet Image">
+    <div class="card-content">
+      <h3>Infinity Bracelet</h3>
+      <p class="p">An elegant infinity Bracelet that adds sparkle to any outfit.</p>
+      <p class="material">Material: 925 Sterling</p>
+      <div class="price">Price: ₹1799</div>
+      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./Images/bracelet4.jpg" alt="Bracelet Image">
+    <div class="card-content">
+      <h3>Floral Elegance Bracelet</h3>
+      <p class="p">An elegant floral bracelet that adds sparkle to any outfit.</p>
+      <p class="material">Material: 925 Sterling</p>
+      <div class="price">Price: ₹2599</div>
+      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./Images/bracelet5.jpg" alt="Bracelet Image">
+    <div class="card-content">
+      <h3>Tri Pearl Bracelet</h3>
+      <p class="p">This beautiful KIRA Bracelet features a delicate arrangement of pearls on a sleek 925 silver base.</p>
+      <p class="material">Material: 925 Sterling</p>
+      <div class="price">Price: ₹1999</div>
+      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./Images/bracelet6.jpg" alt="Bracelet Image">
+    <div class="card-content">
+      <h3>Floral Elegance Bracelet</h3>
+      <p class="p">An elegant floral bracelet that adds sparkle to any outfit.</p>
+      <p class="material">Material: 925 Sterling</p>
+      <div class="price">Price: ₹2799</div>
+      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./Images/bracelet7.jpg" alt="Bracelet Image">
+    <div class="card-content">
+      <h3>Butterfly Bracelet</h3>
+      <p class="p">An elegant floral Butterfly that adds sparkle to any outfit.</p>
+      <p class="material">Material: 925 Sterling Silver</p>
+      <div class="price">Price: ₹999</div>
+      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="./Images/butterfly_er.jfif" alt="Ear Rings Image">
+    <div class="card-content">
+      <h3> Butterfly Earrings</h3>
+      <p>Material: Rose Gold Plated with Cubic Zirconia and Mother-of-Pearl
+        Shipping: Available all over India</p>
+        <div class="price">Price: ₹999</div>
+       <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+      
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./Images/img4.jfif" alt="Ear Rings Image">
+    <div class="card-content">
+      <h3>Gold Ear Rings</h3>
+      <p>A luxurious gold Ear Rings with intricate design.</p>
+      <div class="price">Price: ₹999</div>
+     <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+     
+    </div>
+  </div>
+  <div class="card">
+    <img src="./Images/img2.jfif" alt="Ring Image">
+    <div class="card-content">
+      <h3>Elegant Ring</h3>
+      <p>A beautiful Ring that complements any outfit.</p>
+      <div class="price">Price: ₹999</div>
+      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
+    </div>
+  </div>
+
+  </section>
+  
+  
+
+ 
   <!-- About Section -->
   <section class="about" id="About">
     <h2>About KIRA</h2>
