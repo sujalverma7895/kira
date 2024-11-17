@@ -239,10 +239,9 @@
 }
 
 .image-container a p {
-  color: #792677;
-  font-family: 'Tangerine', serif;
+    color: #792677;
+    font-family: 'Monotype Corsiva', serif;
   font-size: 25px;
-  margin-top: 10px;
 }
 
 .image-container:hover {
@@ -420,9 +419,44 @@
    background-color: #ba2867;
    transform: scale(1.05);
  }
- 
-  /* Footer Section Styling */
-  /* Footer Section Styling */
+
+.Available {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #792677; /* Title text color */
+  text-align: center;
+}
+
+.brand-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between images */
+  flex-wrap: wrap; /* Allows wrapping if screen size is smaller */
+  margin-top: 20px;
+}
+
+.brand-icon {
+  width: 100px; /* Set width for uniform size */
+  height: 100px; /* Keep height equal for circular appearance */
+  border-radius: 50%; /* Circular image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Dark shadow for effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.brand-icon:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
+}
+
+
   .footer {
     background-color: #f8f8f8;
     padding: 20px;
@@ -613,7 +647,7 @@
       <div class="image-container">
         <a href="./Necklace.html">
         <img src="./Images/img1.jfif" alt="Image 1">
-        <p>Neckless</p>
+        <p>Necklace</p>
       </a>
       </div>
     
@@ -788,17 +822,6 @@
   </div>
 
   <div class="card">
-    <img src="./Images/img3.jfif" alt="Bracelet Image">
-    <div class="card-content">
-      <h3>Butterfly Bracelet</h3>
-      <p  class="p">An elegant floral Butterfly that adds sparkle to any outfit.</p>
-      <p class="material">Material: 925 Sterling Silver</p>
-      <div class="price">Price: ₹1999</div>
-      <a href="https://wa.me/918827580822" target="_blank"><button class="add-to-cart-btn">Add to Cart</button></a>
-    </div>
-  </div>
-
-  <div class="card">
     <img src="./Images/bracelet3.jpg" alt="Bracelet Image">
     <div class="card-content">
       <h3>Infinity Bracelet</h3>
@@ -904,7 +927,17 @@
       <input type="number" placeholder="Your Phone Number" required>
       <button type="submit">Send Message</button>
     </form>
+  </section><section class="Available">
+    <h1 class="hero-title">Available on</h1>
+    <section class="brand-list">
+      <img src="./Images/image3.jpeg" alt="Myntra" class="brand-icon" />
+      <img src="./Images/image2.png" alt="Ajio" class="brand-icon" />
+      <img src="./Images/image4.png" alt="Flipkart" class="brand-icon" />
+      <img src="./Images/amazone.png" alt="Amazon" class="brand-icon" />
+      <img src="./Images/image1.png" alt="Nykaa" class="brand-icon" />
+    </section>
   </section>
+  
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -926,5 +959,14 @@
     });
   
   </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6W65971N4W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6W65971N4W');
+</script>
 </body>
 </html>
